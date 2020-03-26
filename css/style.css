@@ -1,0 +1,161 @@
+body {
+  background: #F7CA18;
+  margin: 0;
+  animation: fadeOut 1s;
+}
+
+body.dark {
+  background: #262626;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {background: #F7CA18;}
+  to {background: #262626;}
+}
+
+@keyframes fadeOut {
+  from {background: #262626;}
+  to {background: #F7CA18;}
+}
+
+
+
+#hours,
+#mins,
+#secs {
+  /*padding: 25px;*/
+}
+#hours .dot,
+#mins .dot,
+#secs .dot {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #7f8c8d;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+#hours .dot.off,
+#mins .dot.off,
+#secs .dot.off {
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+}
+
+main {
+  margin-bottom: 70px;
+}
+
+i {
+  float: right;
+    color: #DAA520;
+    cursor: pointer;
+}
+
+.currentColor {
+  color: #fff
+}
+
+img {
+  width: 25px;
+  cursor: pointer;
+  margin-left: 20px
+}
+
+header {
+  padding: 20px;
+  float: right;
+}
+
+a {
+  color: #7f8c8d;
+  word-wrap: break-word;
+}
+
+.information {
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+
+#inside {
+  font-family: 'Roboto Mono', monospace;
+/*   font-family: 'Dosis', sans-serif; */
+  color: #7f8c8d;
+}
+
+img#insideInfo {
+  float: right;
+}
+
+#day {
+  display: none;
+}
+
+#nigth {
+  display: none;
+}
+
+#day.show {
+  display: block;
+}
+
+#nigth.show {
+  display: block;
+}
+
+.dayNightIcons {
+  padding: 20px;
+  display: inline-block;
+  float: right;
+}
+
+.dayNightIcons img {
+  width: 100px;
+}
+
+.information {
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;     /* center items horizontally, in this case */
+    height: 100vh;
+}
+
+.content {
+  width: 50%;
+}
+
+.content h1 {
+  display: inline-block;
+}
+
+p#bHours {
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .content {
+    width: 80%;
+  }
+}
